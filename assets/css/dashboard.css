@@ -1,138 +1,140 @@
-/* *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(to bottom, #ff2d2d, #1f1f1f);
-  
-    height: 100vh;
-}
-
-header {
-   position: fixed;
-    top: 20px;
-    left: 20px;
-    margin: 0;
-    z-index: 1000;
-    background-color: #1f1f1f;
-}
-    */
-
-  /* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(135deg, #8B0000, #4a0000);
-    background-size: cover;
-    min-height: 100vh;
-    color: white;
-    display: flex;
-  }
-  
-  /* ===== HEADER ===== */
-  header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-  }
-  
-  header h1 {
-    font-size: 25px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    margin: 0;
-  }
-  
-  header img {
-    display: none; /* esconde a logo se não quiser */
-  }
-  
-  header p {
-    position: absolute;
-    top: 25px;
-    right: 30px;
-    font-size: 16px;
-    font-weight: 500;
-  }
-  
-  /* ===== MENU LATERAL ===== */
-  nav {
-    width: 220px;
-    min-height: 100vh;
-    background: rgba(0, 0, 0, 0.25);
-    padding: 100px 50px 50px 50px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-  
-  nav a {
-    display: block;
-    background: #555;
-    color: white;
-    text-decoration: none;
-    padding: 12px 18px;
-    border-radius: 8px;
-    font-size: 15px;
-    transition: 0.2s;
-    text-align: center;
-  }
-  
-  nav a:hover {
-    background: #777;
-  }
-  
-  /* ===== CONTEÚDO PRINCIPAL ===== */
-  main {
-    flex: 1;
-    padding: 100px 40px 40px 40px;
-  }
-  
-  main h2 {
-    margin-bottom: 25px;
-    font-size: 24px;
-  }
-  
-  /* ===== TABELA ===== */
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    background: rgba(0, 0, 0, 0.4);
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  
-  th, td {
-    padding: 14px 18px;
-    text-align: left;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  
-  th {
-    background: rgba(0, 0, 0, 0.5);
-    font-weight: 700;
-  }
-  
-  tr:hover {
-    background: rgba(255, 255, 255, 0.05);
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #8B0000, #4a0000);
+  background-size: cover;
+  min-height: 100vh;
+  color: white;
+  display: flex;
+}
+
+/* ===== HEADER ===== */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+header h1 {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+header img {
+  display: flex;
+}
+
+header p {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* ===== MENU LATERAL ===== */
+nav {
+  width: 220px;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 100px 50px 50px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+nav a {
+  display: block;
+  background: #555;
+  color: white;
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: 0.2s;
+  text-align: center;
+}
+
+nav a:hover {
+  background: #777;
+}
+
+/* ===== CONTEÚDO PRINCIPAL ===== */
+main {
+  flex: none;
+  padding: 100px 40px 40px 40px;
+}
+
+main h2 {
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+/* ===== TABELA ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+th {
+  background: rgba(0, 0, 0, 0.5);
+  font-weight: 700;
+}
+
+tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+/* ===== RODAPÉ ===== */
+footer {
+position: fixed;
+bottom: 0;
+left: 220px;
+width: calc(100% - 220px);
+height: 45px;
+
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+background: rgba(0, 0, 0, 0.25);
+color: white;
+font-size: 14px;
+z-index: 100;
+}
+
+
+footer a {
+color: #7777ff;
+text-decoration: underline;
+}
