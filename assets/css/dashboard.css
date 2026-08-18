@@ -13,7 +13,7 @@ body {
   display: flex;
 }
 
-/* ===== HEADER ===== */
+/*HEADER*/
 header {
   position: absolute;
   top: 0;
@@ -45,7 +45,7 @@ header p {
   font-weight: 500;
 }
 
-/* ===== MENU LATERAL ===== */
+/*MENU LATERAL*/
 nav {
   width: 220px;
   min-height: 100vh;
@@ -79,7 +79,7 @@ nav a:hover {
   background: #777;
 }
 
-/* ===== CONTEÚDO PRINCIPAL ===== */
+/*CONTEÚDO PRINCIPAL*/
 main {
   flex: none;
   padding: 100px 40px 40px 40px;
@@ -90,7 +90,7 @@ main h2 {
   font-size: 24px;
 }
 
-/* ===== TABELA ===== */
+/*TABELA*/
 table {
   width: 100%;
   border-collapse: collapse;
@@ -113,7 +113,7 @@ th {
 tr:hover {
   background: rgba(255, 255, 255, 0.05);
 }
-/* ===== RODAPÉ ===== */
+/*RODAPÉ */
 footer {
 position: fixed;
 bottom: 0;

@@ -1,5 +1,5 @@
 *{
-    margin: 0;
+    margin: auto;
     padding: 0;
     box-sizing: border-box;
 }
@@ -10,20 +10,20 @@ body{
     display: flex;
     flex-direction: column;
     justify-items: center;
-    align-content: center;
+    /* align-content: center; */
     padding: 20px;
     height: 100vh;
 }
 
 form{
     background: rgba(255,255,255,0.35);
-    width: 450px;
-    padding: 35px;
+    width: 300px;
+    padding: 10px;
     border-radius: 25px;
     text-align: center;
-    display: center;
     border: 1px solid rgba(255,255,255,0.6);
     box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    margin: auto;
 }
 
 form div{
@@ -37,6 +37,7 @@ form div img{
     height: 110px;
     border-radius: 50%;
     object-fit: cover;
+    
 }
 
 h1{
@@ -80,14 +81,13 @@ a{
 .login{
     margin-top: 16px;
     display: block;
-    width: 100%;
+    width: 440px;
     background-color: #ff2d2d;
     color: white;
-    padding: 12px;
-    border-radius: 10px;
+    padding: 50px;
+    border-radius: 25px;
     font-weight: bold;
-    margin-bottom: 2px;
-    transition: 0.3s;
+   
 }
 
 .login:hover{
@@ -98,24 +98,20 @@ a{
 
     margin-top: 16px;
     display: block;
-    width: 100%;
+    width: 400px;
+    min-width: 600px;
     background-color: #1f1f1f;
     color: white;
-    padding: 12px;
+    padding: 20px;
     border-radius: 10px;
     font-weight: bold;
+    box-sizing: border-box;
+   
+    
 }
 
 .cadastro:hover{
     background-color: #000;
-}
-
-.pedro{
-    display: block;
-    text-align: left;
-    margin-bottom: 20px;
-    font-style: italic;
-    color: rgba(255,255,255,0.6);
 }
 
 footer{
