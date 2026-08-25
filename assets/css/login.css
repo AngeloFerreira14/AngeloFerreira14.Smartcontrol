@@ -10,8 +10,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-items: center;
-    /* align-content: center; */
-    padding: 20px;
+    padding: 50px, 100px;
     height: 100vh;
 }
 
@@ -24,20 +23,6 @@ form{
     border: 1px solid rgba(255,255,255,0.6);
     box-shadow: 0 8px 20px rgba(0,0,0,0.25);
     margin: auto;
-}
-
-form div{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-form div img{
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    object-fit: cover;
-    
 }
 
 h1{
@@ -68,32 +53,6 @@ a{
     text-decoration: none;
 }
 
-.senha{
-    display: block;
-    text-align: left;
-    margin-bottom: 20px;
-    font-style: italic;
-    color: #ff7272;
-
-
-}
-
-.login{
-    margin-top: 16px;
-    display: block;
-    width: 440px;
-    background-color: #ff2d2d;
-    color: white;
-    padding: 50px;
-    border-radius: 25px;
-    font-weight: bold;
-   
-}
-
-.login:hover{
-    background-color:#b30000;
-}
-
 .cadastro {
 
     margin-top: 16px;
@@ -106,16 +65,34 @@ a{
     border-radius: 10px;
     font-weight: bold;
     box-sizing: border-box;
-   
-    
 }
 
 .cadastro:hover{
     background-color: #000;
 }
 
+.butao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #b30000;
+    color: #1f1f1f;
+}
+.butao:hover{
+    scale: 1.01;
+    background-color: #890000;
+}
+.mapa{
+    min-width: 50px;
+    min-height: 50px;
+}
+/* 
+
 footer{
     margin-top: 16px;
     justify-items: left;
     bottom: 15px;
-}
+} */
