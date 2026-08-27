@@ -49,7 +49,7 @@ header p {
 nav {
   width: 220px;
   min-height: 100vh;
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(199, 16, 16, 0.25);
   padding: 100px 50px 50px 50px;
   display: flex;
   flex-direction: column;

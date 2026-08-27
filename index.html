@@ -8,29 +8,27 @@
     <link rel="stylesheet" href="assets/css/login.css">
 </head>
 <body>
-  
     <form method="get" action="dashboard.html">
 
         <img src="assets/images/image-removebg-preview.png" alt="logo do sistema" width="100" >
 
-       <label for="email">email completo:</label>
-       <input type="text" nome="email_completo" id="email_completo" placeholder="Digite seu email completo"> 
-       <br><br>
-       
-       <label for="senha">senha:</label>
-       <input type="password" nome="senha" id="senha" placeholder="Digite sua senha">
+        <label for="email">email completo:</label>
+        <input type="email" nome="email_completo" id="email_completo" placeholder="Digite seu email completo" required> 
         <br><br>
 
-       <a class= "butao" href="dashboard.html">Login</a>
-
-       <a class= "butao" href="cadastro.html">Registra-se</a>
-       
-       
+        <label for="senha">senha:</label>
+        <input type="password" nome="senha" id="senha" placeholder="Digite sua senha" required>
+        <br><br>
+        <input type="submit" class="butao" value="Login">
+        <!-- <a class= "butao" href="dashboard.html">Login</a> -->
+        <a class= "butao" href="cadastro.html">Registra-se</a>
     </form>
     <footer>
         <br><br>
         <iframe clas="mapa "src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3705.709978770783!2d-43.35135370328397!3d-21.7527665181242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x989c976673a705%3A0xb0aa4dd64090a7f5!2sSENAI%20Juiz%20de%20Fora%20CFP%20Jos%C3%A9%20Fagundes%20Netto!5e0!3m2!1spt-BR!2sbr!4v1786038371456!5m2!1spt-BR!2sbr" width="275" height="225" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
     </footer>
+
+    <script src="assets/js/main.js"></script>
 
 </body>
 </html>
