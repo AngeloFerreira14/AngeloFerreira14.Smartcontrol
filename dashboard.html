@@ -2,19 +2,22 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Control - Dashboard</title>
     <link rel="stylesheet" href="assets/css/dashboard.css">
 </head>
 <body>
    
-    <header>
-        <h1>SMART CONTROL</h1>
+    <header class="header">
+        <h1 class="titlehead">SMART CONTROL</h1>
         <img src="assets/images/image-removebg-preview.png" alt="logo do sistema" width="100" >
-        <p>Usuário: Aluno SENAI</p>
+        <div class="header-right">
+            <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+        </div>
     </header>
      
 
-    <nav>
+    <nav class="menu">
         <ul>
             <li><a href="index.html">Início</a></li>
             <li><a href="dashboard.html">Relatórios</a></li>
@@ -22,12 +25,14 @@
             <li><a href="index.html">Perfil</a></li>
         </ul>
     </nav>
+    <section id="saudacao"></section>
 
     <main>
         <h2>Relatório de Acessos Recentes</h2>
         <p id="nomeCompleto"></p>
         <p id="dataAtual"></p>
 
+        <div class="table-wrapper">
         <table>
             <thead>
                 <tr>
@@ -76,6 +81,7 @@
                 </tr>
             </tbody>
         </table>
+        </div>
     </main>
 
     <footer>
@@ -87,6 +93,6 @@
             | Smart Control &copy; 2026 - SENAI
         </p>
     </footer>
-
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

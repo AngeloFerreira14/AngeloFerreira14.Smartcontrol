@@ -5,136 +5,298 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(135deg, #8B0000, #4a0000);
-  background-size: cover;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #8B0000 0%, #4a0000 100%);
   min-height: 100vh;
-  color: white;
-  display: flex;
+  color: #ffffff;
 }
 
-/*HEADER*/
-header {
-  position: absolute;
+/* HEADER */
+.header {
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  padding: 20px 20px;
+  right: 0;
+  height: 70px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  z-index: 100;
+  justify-content: space-between;
+  padding: 0 24px;
+  background: rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(4px);
+  z-index: 60;
 }
 
-header h1 {
+.titlehead {
   font-size: 20px;
-  font-weight: bold;
   letter-spacing: 1px;
-  margin: 0;
 }
 
-header img {
+.header img {
+  height: 48px;
+  width: auto;
+}
+
+.header-right {
   display: flex;
-}
-
-header p {
-  position: absolute;
-  top: 25px;
-  right: 30px;
-  font-size: 16px;
-  font-weight: 500;
-}
-
-/*MENU LATERAL*/
-nav {
-  width: 220px;
-  min-height: 100vh;
-  background: rgba(199, 16, 16, 0.25);
-  padding: 100px 50px 50px 50px;
-  display: flex;
-  flex-direction: column;
+  align-items: center;
   gap: 12px;
 }
 
-nav ul {
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* SIDEBAR */
+.menu {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 260px;
+  height: calc(100vh - 70px);
+  background: rgba(199, 16, 16, 0.18);
+  padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: auto;
+  z-index: 50;
+}
+
+.menu ul {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
-nav a {
+.menu a {
   display: block;
-  background: #555;
-  color: white;
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
   text-decoration: none;
-  padding: 12px 18px;
+  padding: 10px 14px;
   border-radius: 8px;
   font-size: 15px;
-  transition: 0.2s;
+  transition: background .18s ease;
   text-align: center;
 }
 
-nav a:hover {
-  background: #777;
+.menu a:hover {
+  background: rgba(255, 255, 255, 0.08);
 }
 
-/*CONTEÚDO PRINCIPAL*/
+/* SAUDAÇÃO */
+#saudacao {
+  margin-left: 260px;
+  margin-top: 90px;
+  padding: 12px 20px;
+}
+
+#saudacao .card {
+  background: linear-gradient(90deg, #b30000, #ff2d2d);
+  padding: 12px 18px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  font-weight: 600;
+  color: #fff;
+  display: inline-block;
+}
+
+/* MAIN */
 main {
-  flex: none;
-  padding: 100px 40px 40px 40px;
+  margin-left: 260px;
+  margin-top: 20px;
+  padding: 28px;
+  max-width: calc(100% - 320px);
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 main h2 {
-  margin-bottom: 25px;
-  font-size: 24px;
+  text-align: center;
+  margin-bottom: 14px;
+  font-size: 22px;
 }
 
-/*TABELA*/
+/* TABELA */
 table {
   width: 100%;
   border-collapse: collapse;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 8px;
   overflow: hidden;
 }
 
-th, td {
-  padding: 14px 18px;
+th,
+td {
+  padding: 12px 14px;
   text-align: left;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 th {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.45);
   font-weight: 700;
 }
 
 tr:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.03);
 }
-/*RODAPÉ */
+
+/* FOOTER */
 footer {
-position: fixed;
-bottom: 0;
-left: 220px;
-width: calc(100% - 220px);
-height: 45px;
-
-
-display: flex;
-justify-content: center;
-align-items: center;
-
-
-background: rgba(0, 0, 0, 0.25);
-color: white;
-font-size: 14px;
-z-index: 100;
+  position: fixed;
+  bottom: 0;
+  left: 260px;
+  width: calc(100% - 260px);
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.18);
+  color: #eaeaea;
+  font-size: 14px;
+  z-index: 60;
 }
-
 
 footer a {
-color: #7777ff;
-text-decoration: underline;
+  color: #bfc8ff;
+  text-decoration: underline;
+}
+
+/* RESPONSIVIDADE PARA CELULAR */
+@media (max-width: 800px) {
+
+    /* HEADER */
+    .header {
+        height: 65px;
+        padding: 0 15px;
+    }
+
+    .titlehead {
+        font-size: 16px;
+    }
+
+    .header img {
+        height: 40px;
+        width: auto;
+    }
+
+    .header-right {
+        gap: 8px;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 25px;
+    }
+
+    #userDisplay {
+        display: none;
+    }
+
+
+    /* MENU */
+    .menu {
+        display: none;
+        top: 65px;
+        right: 0;
+        width: 50%;
+        height: auto;
+        padding: 12px;
+        background: rgba(0, 0, 0, 0.92);
+    }
+
+    .menu.open {
+        display: flex;
+    }
+
+    .menu ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .menu li {
+        width: 100%;
+    }
+
+    .menu a {
+        width: 100%;
+        padding: 12px;
+        font-size: 15px;
+    }
+
+
+    /* SAUDAÇÃO */
+    #saudacao {
+        margin-left: 0;
+        margin-top: 80px;
+        padding: 12px 15px;
+    }
+
+    #saudacao .card {
+        width: 100%;
+        text-align: center;
+    }
+
+
+    /* MAIN */
+    main {
+        margin-left: 0;
+        margin-top: 10px;
+        padding: 20px 15px;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    main h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+
+    /* TABELA */
+    .table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 600px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+
+    /* RODAPÉ */
+    footer {
+        left: 0;
+        width: 100%;
+        height: auto;
+        min-height: 48px;
+        padding: 8px 12px;
+        font-size: 12px;
+        text-align: center;
+    }
+
+
+    /* ESCONDE NOME NO CONTEÚDO */
+    #nomeCompleto {
+        display: none;
+    }
 }
