@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to bottom, #ff2d2d, #1f1f1f);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* Logo */
+header {
+    margin-bottom: 20px;
+}
+
+header img {
+    width: 100px;
+    height: auto;
+}
+
+/* Formulário */
+form {
+    background: rgba(255, 255, 255, 0.35);
+    width: 350px;
+    padding: 30px;
+    border-radius: 25px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5px);
+}
+
+/* Labels */
+label {
+    display: block;
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    color: #222;
+    font-weight: bold;
+}
+
+/* Campos */
+input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+    background-color: white;
+}
+
+/* Efeito quando clicar no campo */
+input:focus {
+    box-shadow: 0 0 0 3px rgba(179, 0, 0, 0.3);
+}
+
+/* Link Concluído */
+a {
+    text-decoration: none;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 15px;
+    background-color: #b30000;
+    color: white;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+/* Efeito do botão */
+a:hover {
+    background-color: #890000;
+
+    transform: scale(1.02);
+}
+
+/* Responsividade */
+@media (max-width: 500px) {
+
+    body {
+        padding: 20px;
+    }
+
+    form {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    header img {
+        width: 80px;
+    }
+}
