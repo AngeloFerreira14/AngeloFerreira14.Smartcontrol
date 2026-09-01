@@ -1,30 +1,11 @@
 
 (function () {
-    const STORAGE_KEY = 'smartcontrol_user';
-
     function askUser() {
-        let nome = prompt('Digite seu nome:');
-        let sobrenome = prompt('Digite seu sobrenome:');
-
-        if (!nome || nome.trim() === '') nome = 'Usuário';
-        if (!sobrenome || sobrenome.trim() === '') sobrenome = '';
-
-        return `${nome} ${sobrenome}`.trim();
+        let nomeCompleto = prompt('Digite seu nome e sobrenome:');
+        return nomeCompleto.trim();
     }
 
-    let usuario = null;
-    try {
-        usuario = localStorage.getItem(STORAGE_KEY);
-    } catch (e) {
-        usuario = null;
-    }
-
-    if (!usuario) {
-        usuario = askUser();
-        try {
-            localStorage.setItem(STORAGE_KEY, usuario);
-        } catch (e) {}
-    }
+    let usuario = askUser();
 
     const agora = new Date();
     const dias = [
@@ -60,25 +41,15 @@
     if (nomeElem) nomeElem.textContent = saudacao;
     if (dataElem) dataElem.textContent = dataFormatada;
 
-        // Também exibe o nome no header (útil em mobile)
-        const headerUser = document.getElementById('userDisplay');
-        if (headerUser) headerUser.textContent = saudacao;
+    const headerUser = document.getElementById('userDisplay');
+    if (headerUser) headerUser.textContent = saudacao;
 
-        // Toggle do menu em mobile
-        const menuToggle = document.querySelector('.menu-toggle');
-        const menu = document.querySelector('.menu');
-        if (menuToggle && menu) {
-            menuToggle.addEventListener('click', function () {
-                menu.classList.toggle('open');
-            });
-            // fecha menu ao clicar em um link
-            menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
-        }
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu');
+    if (menuToggle && menu) {
+        menuToggle.addEventListener('click', function () {
+            menu.classList.toggle('open');
+        });
 
-    // Helper para desenvolvimento: limpar usuário armazenado
-    window.smartcontrol = window.smartcontrol || {};
-    window.smartcontrol.clearUser = function () {
-        try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
-        location.reload();
-    };
+    }
 })();
