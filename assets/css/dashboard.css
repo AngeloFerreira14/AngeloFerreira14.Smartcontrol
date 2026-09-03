@@ -18,12 +18,12 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    height: 70px;
+    height: 90px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 24px;
-    background: rgba(0, 0, 0, 0.18);
+    background: rgb(94, 1, 1);
     backdrop-filter: blur(4px);
     z-index: 60;
     transition:background 0.3s ease;
@@ -80,7 +80,7 @@ body {
     left: 0;
     width: 260px;
     height: calc(100vh - 70px);
-    background: rgba(199, 16, 16, 0.18);
+    background: rgba(80, 4, 4, 0.644);
     padding: 28px 20px;
     display: flex;
     flex-direction: column;
@@ -190,7 +190,6 @@ body {
 }
 
 /* MAIN */
-
 main {
     margin-left: 260px;
     margin-top: 20px;
@@ -213,7 +212,7 @@ main h2 {
 table {
     width: 100%;
     border-collapse: collapse;
-    background: rgba(0, 0, 0, 0.35);
+    background: rgba(119, 31, 31, 0.685);
     border-radius: 8px;
     overflow: hidden;
     transition:
@@ -247,7 +246,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.18);
+    background: #5e0202;
     color: #eaeaea;
     font-size: 14px;
     z-index: 60;
@@ -260,11 +259,10 @@ footer a {
 }
 
 /* DARK MODE */
-
 body.dark-theme {
     background: linear-gradient(
         135deg,
-        #111111 0%,
+        #1b1b1b 0%,
         #242424 100%
     );
 
@@ -272,19 +270,17 @@ body.dark-theme {
 }
 
 /* Header */
-
 body.dark-theme .header {
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(5, 5, 5, 0.75);
 }
 
 /* Menu */
-
 body.dark-theme .menu {
-    background: rgba(20, 20, 20, 0.95);
+    background: rgba(24, 22, 22, 0.95);
 }
 
 body.dark-theme .menu a {
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(134, 4, 4, 0.788);
     color: #ffffff;
 }
 
@@ -293,7 +289,6 @@ body.dark-theme .menu a:hover {
 }
 
 /* Pesquisa */
-
 body.dark-theme .input-with-icon input {
     background: rgba(255, 255, 255, 0.10);
     color: #ffffff;
@@ -310,26 +305,53 @@ body.dark-theme .input-with-icon input:focus {
 }
 
 /* Tabela */
-
 body.dark-theme table {
-    background: rgba(20, 20, 20, 0.90);
+    background: rgba(54, 51, 51, 0.9);
 }
 
 body.dark-theme th {
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(124, 3, 3, 0.904);
 }
 
-body.dark-theme td {
-    border-bottom-color:
-        rgba(255, 255, 255, 0.10);
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 50px;
 }
 
-body.dark-theme tr:hover {
-    background: rgba(255, 255, 255, 0.08);
+.card {
+    background: #333333;
+    color: white;
+    padding: 25px;
+    border-radius: 20px;
+    border: 2px solid #1b1b1b;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+    transition:
+        background-color 0.4s ease,
+        color 0.4s ease,
+        border-color 0.4s ease;
+}
+
+.card h3 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.card p {
+    font-size: 35px;
+    font-weight: bold;
+    color: #ff2d2d;
+    margin-bottom: 10px;
+}
+
+.card span {
+    color: #aaaaaa;
 }
 
 /* Footer */
-
 body.dark-theme footer {
     background: rgba(0, 0, 0, 0.75);
     color: #eeeeee;
@@ -340,13 +362,11 @@ body.dark-theme footer a {
 }
 
 /* Botão */
-
 body.dark-theme #btnTema {
     color: #ffffff;
 }
 
 /* RESPONSIVIDADE */
-
 @media (max-width: 800px) {
     /* HEADER */
     .header {
@@ -408,8 +428,8 @@ body.dark-theme #btnTema {
         width: 100%;
         text-align: center;
     }
-    /* MAIN */
 
+    /* MAIN */
     main {
         margin-left: 0;
         margin-top: 10px;
@@ -457,5 +477,4 @@ body.dark-theme #btnTema {
     .search-box {
         width: min(420px, 92%);
     }
-
 }
