@@ -1,13 +1,15 @@
 
 (function () {
+
     function askUser() {
-        let nomeCompleto = prompt('Digite seu nome e sobrenome:');
+        let nomeCompleto = prompt( 'Digite seu nome e sobrenome:');
+
+        if (!nomeCompleto) {return 'Usuário'; }
         return nomeCompleto.trim();
     }
 
-    let usuario = askUser();
-
-    const agora = new Date();
+    const usuario = askUser();
+    const agora = new Date()
     const dias = [
         'Domingo',
         'Segunda-feira',
@@ -25,45 +27,69 @@
     const hora = String(agora.getHours()).padStart(2, '0');
     const minuto = String(agora.getMinutes()).padStart(2, '0');
 
+    /* FUSO HORÁRIO */
     const fusoMinutos = -agora.getTimezoneOffset();
-    const sinal = fusoMinutos >= 0 ? '+' : '-';
-    const fusoHoras = String(Math.floor(Math.abs(fusoMinutos) / 60)).padStart(2, '0');
-    const fuso = `${sinal}${fusoHoras}:00`;
+    const sinal =fusoMinutos >= 0 ? '+' : '-';
+    const fusoHoras = String( Math.floor(Math.abs(fusoMinutos) / 60)).padStart(2, '0');
+    const fuso =`${sinal}${fusoHoras}:00`;
 
+    /* TEXTOS */
     const saudacao = `Olá, ${usuario}!`;
-    const dataFormatada = `${diaSemana}, ${dia}/${mes}/${ano} - ${hora}:${minuto} (${fuso})`;
-
+    const dataFormatada =`${diaSemana}, ${dia}/${mes}/${ano} - ${hora}:${minuto} (${fuso})`;
     console.log(`${saudacao} Hoje é ${dataFormatada}`);
 
-    const nomeElem = document.getElementById('nomeCompleto');
+    /* MOSTRAR INFORMAÇÕES NO HTML */
+    const nomeElem =document.getElementById('nomeCompleto');
     const dataElem = document.getElementById('dataAtual');
+    if (nomeElem) { nomeElem.textContent = saudacao;}
+    if (dataElem) { dataElem.textContent = dataFormatada;}
 
-    if (nomeElem) nomeElem.textContent = saudacao;
-    if (dataElem) dataElem.textContent = dataFormatada;
+    /* MENU MOBILE */
+    const menuToggle =document.querySelector('.menu-toggle');
 
-    const headerUser = document.getElementById('userDisplay');
-    if (headerUser) headerUser.textContent = saudacao;
+    const menu =document.querySelector('.menu');
 
-    const menuToggle = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.menu');
     if (menuToggle && menu) {
-        menuToggle.addEventListener('click', function () {
-            menu.classList.toggle('open');
-        });
-
+        menuToggle.addEventListener('click',function () { menu.classList.toggle('open'); });
     }
+
+    /* DARK MODE */
+    const btnTema = document.querySelector('#btnTema');
+    if (btnTema) {
+        btnTema.addEventListener( 'click',function () {document.body.classList.toggle('dark-theme');
+
+            }
+        );
+    }
+
 })();
 
-// 
 
-// const campoBusca = document.querySelector('campoBusca');
-// const linhasTabela = document.querySelectorAll('tbody tr');
+/* BUSCA NA TABELA */
 
-// if (campoBusca && linhasTabela) {
-//     campoBusca.addEventListener('input', function () {
-//         const termoBusca = campoBusca.value.trim().toLowerCase();
+const campoBusca =
+    document.querySelector('#campoBusca');
 
-//         linhasTabela.forEach(function (linha) {
-//             const conteudoLinha = linha.textContent.trim().toLowerCase();
-            
-//     }}
+const linhasTabela =
+    document.querySelectorAll('tbody tr');
+
+
+if (campoBusca) {
+
+    campoBusca.addEventListener('input',
+        function () {
+            const termoBusca =campoBusca.value.trim().toLowerCase();
+            linhasTabela.forEach(
+                function (linha) {
+                    const conteudoLinha =linha.textContent.trim().toLowerCase();
+                    if ( conteudoLinha.includes( termoBusca )) {
+                        linha.style.display = '';
+                    } else {
+                        linha.style.display = 'none';
+                    }
+                }
+            );
+        }
+    );
+}
+

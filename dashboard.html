@@ -6,17 +6,25 @@
     <title>Smart Control - Dashboard</title>
     <link rel="stylesheet" href="assets/css/dashboard.css">
 </head>
+
 <body>
-   
+
+    <!-- HEADER -->
     <header class="header">
         <h1 class="titlehead">SMART CONTROL</h1>
-        <img src="assets/images/image-removebg-preview.png" alt="logo do sistema" width="100" >
+        <img src="assets/images/image-removebg-preview.png" alt="Logo do sistema" width="100">
         <div class="header-right">
-            <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+
+            <!-- BOTÃO DO MENU MOBILE -->
+            <button class="menu-toggle" aria-label="Abrir menu" type="button" >☰</button>
+            <!-- BOTÃO DARK MODE -->
+            <button id="btnTema" aria-label="Alternar tema"  type="button" >
+                <svg xmlns="http://www.w3.org/2000/svg" height="50px"  viewBox="0 -960 960 960"  width="50px"  fill="currentColor" ><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q8 0 17 .5t23 1.5q-36 32-56 79t-20 99q0 90 63 153t153 63q52 0 99-18.5t79-51.5q1 12 1.5 19.5t.5 14.5q0 150-105 255T480-120Zm0-60q109 0 190-67.5T771-406q-25 11-53.67 16.5Q688.67-384 660-384q-114.69 0-195.34-80.66Q384-545.31 384-660q0-24 5-51.5t18-62.5q-98 27-162.5 109.5T180-480q0 125 87.5 212.5T480-180Zm-4-297Z"/></svg>
+            </button>
         </div>
     </header>
-     
 
+    <!-- MENU LATERAL -->
     <nav class="menu">
         <ul>
             <li><a href="index.html">Início</a></li>
@@ -24,11 +32,10 @@
             <li><a href="index.html">Configurações</a></li>
             <li><a href="index.html">Perfil</a></li>
         </ul>
+
     </nav>
     <section id="saudacao"></section>
 
-    <!-- <label for="text">PESQUISAR:</label>
-    <input type="text" id="campoBusca" placeholder="Pesquisar..."> -->
     <div class="search-area">
         <div class="search-box">
             <label for="campoBusca" class="search-label">PESQUISAR</label>
@@ -39,72 +46,71 @@
             </div>
         </div>
     </div>
-    
+
     <main>
+
         <h2>Relatório de Acessos Recentes</h2>
         <p id="nomeCompleto"></p>
         <p id="dataAtual"></p>
 
+        <!-- TABELA -->
         <div class="table-wrapper">
-        <table>
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>Data</th>
-                    <th>Hora</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Renato lendas velho satanico</td>
-                    <td>03/08/2026</td>
-                    <td>08:15</td>
-                    <td>Sucesso</td>
-                </tr>
-                <tr>
-                    <td>Maria de Lurdes cabral</td>
-                    <td>03/08/2026</td>
-                    <td>09:42</td>
-                    <td>Sucesso</td>
-                </tr>
-                <tr>
-                    <td>Carlao motopeças</td>
-                    <td>02/08/2026</td>
-                    <td>14:30</td>
-                    <td>Sucesso</td>
-                </tr>
-                <tr>
-                    <td>gelim casado</td>
-                    <td>02/08/2026</td>
-                    <td>16:05</td>
-                    <td>Sucesso</td>
-                </tr>
-                <tr>
-                    <td>Pedro tech</td>
-                    <td>01/08/2026</td>
-                    <td>11:20</td>
-                    <td>Falha</td>
-                </tr>
-                <tr>
-                    <td>Raquel dos Teclados</td>
-                    <td>01/08/2026</td>
-                    <td>19:48</td>
-                    <td>Sucesso</td>
-                </tr>
-            </tbody>
-        </table>
+
+            <table id="tabelaAcessos">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Data</th>
+                        <th>Hora</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Renato lendas velho satanico</td>
+                        <td>03/08/2026</td>
+                        <td>08:15</td>
+                        <td>Sucesso</td>
+                    </tr>
+                    <tr>
+                        <td>Maria de Lurdes cabral</td>
+                        <td>03/08/2026</td>
+                        <td>09:42</td>
+                        <td>Sucesso</td>
+                    </tr>
+                    <tr>
+                        <td>Carlao motopeças</td>
+                        <td>02/08/2026</td>
+                        <td>14:30</td>
+                        <td>Sucesso</td>
+                    </tr>
+                    <tr>
+                        <td>gelim casado</td>
+                        <td>02/08/2026</td>
+                        <td>16:05</td>
+                        <td>Sucesso</td>
+                    </tr>
+                    <tr>
+                        <td>Pedro tech</td>
+                        <td>01/08/2026</td>
+                        <td>11:20</td>
+                        <td>Falha</td>
+                    </tr>
+                    <tr>
+                        <td>Raquel dos Teclados</td>
+                        <td>01/08/2026</td>
+                        <td>19:48</td>
+                        <td>Sucesso</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </main>
 
+    <!-- RODAPÉ -->
     <footer>
-        <p>
-            Ambiente de apoio da turma:
-            <a href="https://pedrotech.com.br/pedrolandia/" target="_blank">
-            Portal Pedro Landia
-            </a>
-            | Smart Control &copy; 2026 - SENAI
-        </p>
+        <p>Ambiente de apoio da turma:<a href="https://pedrotech.com.br/pedrolandia/" target="_blank"> Portal Pedro Landia </a>| Smart Control &copy; 2026 - SENAI </p>
+
     </footer>
     <script src="assets/js/main.js"></script>
 </body>
