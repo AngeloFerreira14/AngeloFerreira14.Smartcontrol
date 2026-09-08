@@ -44,52 +44,34 @@
     if (nomeElem) { nomeElem.textContent = saudacao;}
     if (dataElem) { dataElem.textContent = dataFormatada;}
 
-    /* MENU MOBILE */
-    const menuToggle =document.querySelector('.menu-toggle');
-
-    const menu =document.querySelector('.menu');
-
-    if (menuToggle && menu) {
-        menuToggle.addEventListener('click',function () { menu.classList.toggle('open'); });
-    }
-
-    /* DARK MODE */
-    const btnTema = document.querySelector('#btnTema');
-    if (btnTema) {
-        btnTema.addEventListener( 'click',function () {document.body.classList.toggle('dark-theme');
-
-            }
-        );
-    }
-
 })();
 
 
 /* BUSCA NA TABELA */
 
-const campoBusca =
-    document.querySelector('#campoBusca');
+// const campoBusca =
+//     document.querySelector('#campoBusca');
 
-const linhasTabela =
-    document.querySelectorAll('tbody tr');
+// const linhasTabela =
+//     document.querySelectorAll('tbody tr');
 
 
-if (campoBusca) {
+// if (campoBusca) {
 
-    campoBusca.addEventListener('input',
-        function () {
-            const termoBusca =campoBusca.value.trim().toLowerCase();
-            linhasTabela.forEach(
-                function (linha) {
-                    const conteudoLinha =linha.textContent.trim().toLowerCase();
-                    if ( conteudoLinha.includes( termoBusca )) {
-                        linha.style.display = '';
-                    } else {
-                        linha.style.display = 'none';
-                    }
-                }
-            );
-        }
-    );
-}
+//     campoBusca.addEventListener('input',
+//         function () {
+//             const termoBusca =campoBusca.value.trim().toLowerCase();
+//             linhasTabela.forEach(
+//                 function (linha) {
+//                     const conteudoLinha =linha.textContent.trim().toLowerCase();
+//                     if ( conteudoLinha.includes( termoBusca )) {
+//                         linha.style.display = '';
+//                     } else {
+//                         linha.style.display = 'none';
+//                     }
+//                 }
+//             );
+//         }
+//     );
+// }
 

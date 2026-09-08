@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Control - Progressão de carga</title>
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/css/progressao_carga.css">
+</head>
+<body>
+    <header class="header">
+            <img src="assets/images/image-removebg-preview.png" alt="Logo do sistema" width="100">
+            <h1 class="titlehead">SMART CONTROL</h1>
+
+            <div class="search-area">
+                <div class="search-box">
+        
+                    <div class="input-with-icon">
+                        <span class="search-icon" aria-hidden="true">🔍</span>
+                        <input type="text" id="campoBusca" placeholder="Pesquisar...">
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-right">
+
+                <!-- BOTÃO DO MENU MOBILE -->
+                <button class="menu-toggle" aria-label="Abrir menu" type="button" >☰</button>
+                <!-- BOTÃO DARK MODE -->
+                <button id="btnTema" aria-label="Alternar tema"  type="button" >
+                    <svg xmlns="http://www.w3.org/2000/svg" height="50px"  viewBox="0 -960 960 960"  width="50px"  fill="currentColor" ><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q8 0 17 .5t23 1.5q-36 32-56 79t-20 99q0 90 63 153t153 63q52 0 99-18.5t79-51.5q1 12 1.5 19.5t.5 14.5q0 150-105 255T480-120Zm0-60q109 0 190-67.5T771-406q-25 11-53.67 16.5Q688.67-384 660-384q-114.69 0-195.34-80.66Q384-545.31 384-660q0-24 5-51.5t18-62.5q-98 27-162.5 109.5T180-480q0 125 87.5 212.5T480-180Zm-4-297Z"/></svg>
+                </button>
+            </div>
+        </header>
+
+    <!-- MENU LATERAL -->
+    <nav class="menu">
+         <ul>
+            <li><a href="index.html">Perfil</a></li>
+            <li><a href="dashboard.html">Relatórios</a></li>
+            <li><a href="progressao_de_carga.html">Progressão de Carga</a></li>
+            <li><a href="frequencia.html">Frequência Mensal</a></li>
+            <li><a href="percentual_massa.html">Percentual de Massa</a></li>
+            <li><a href="percentual_gordura.html">Percentual de Gordura</a></li>
+            <li><a href="tempo_treino.html">Tempo de Treino</a></li>
+            <li><a href="index.html">Sair</a></li>
+        </ul>
+
+    </nav>
+    
+    <section id="saudacao"></section>
+
+    <main>
+
+        <p id="nomeCompleto"></p>
+        <p id="dataAtual"></p>
+    
+        <section class="cards">
+
+            <div class="card">
+                <h3>Frequência Mensal</h3>
+                <p class="numCard">50%</p>
+                <span>últimos três meses</span>
+            </div>
+        </section>
+        <h2>Sua Frequência</h2>
+        
+        <!-- TABELA -->
+        <div class="table-wrapper">
+
+            <table id="tabelaAcessos">
+                <thead>
+                    <tr>
+                        <th>Mês</th>
+                        <th>Dias </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Agosto</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>Julho</td>   
+                        <td>22</td>
+                    </tr>
+                    <tr>
+                        <td>Junho</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>Abril</td>
+                        <td>30</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+         <footer>
+        <p>Ambiente de apoio da turma:<a href="https://pedrotech.com.br/pedrolandia/" target="_blank"> Portal Pedro Landia </a>| Smart Control &copy; 2026 - SENAI </p>
+    </footer>
+    </main>
+    <script src="assets/js/tema.js"></script>
+     <script src="assets/js/busca.js"></script> 
+</body>
+</html>

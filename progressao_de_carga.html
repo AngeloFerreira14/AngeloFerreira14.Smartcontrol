@@ -3,13 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Control - Dashboard</title>
+    <title>Smart Control - Progressão de carga</title>
     <link rel="stylesheet" href="assets/css/dashboard.css">
 </head>
-
 <body>
-
-    <!-- HEADER -->
     <header class="header">
         <img src="assets/images/image-removebg-preview.png" alt="Logo do sistema" width="100">
         <h1 class="titlehead">SMART CONTROL</h1>
@@ -37,7 +34,7 @@
 
     <!-- MENU LATERAL -->
     <nav class="menu">
-        <ul>
+         <ul>
             <li><a href="index.html">Perfil</a></li>
             <li><a href="dashboard.html">Relatórios</a></li>
             <li><a href="progressao_de_carga.html">Progressão de Carga</a></li>
@@ -53,13 +50,10 @@
     <section id="saudacao"></section>
 
     <main>
-        <div class="user-info">
-            <p id="nomeCompleto"></p>
-            <p id="dataAtual"></p>
 
-        </div>
-        
-
+        <p id="nomeCompleto"></p>
+        <p id="dataAtual"></p>
+    
         <section class="cards">
 
             <div class="card">
@@ -67,34 +61,8 @@
                 <p class="numCard">50%</p>
                 <span>últimos três meses</span>
             </div>
-
-            <div class="card">
-                <h3>Frequência Mensal</h3>
-                <p class="numCard">85%</p>
-                <span>últimos três meses</span>
-            </div>
-
-            <div class="card">
-                <h3>Percentual de Massa</h3>
-                <p class="numCard">50%</p>
-                <span>últimos três meses</span>
-            </div>
-
-            <div class="card">
-                <h3>Percentual de Gordura</h3>
-                <p class="numCard">10%</p>
-                <span>últimos três meses</span>
-            </div>
-            
-            <div class="card">
-                <h3>Tempo de Treino</h3>
-                <p>5 min</p>
-                <span>Tempo total</span>
-            </div>
-
         </section>
-
-        <h2>Relatório de Acessos Recentes</h2>
+        <h2>Sua Progressão de Carga</h2>
         
         <!-- TABELA -->
         <div class="table-wrapper">
@@ -102,64 +70,47 @@
             <table id="tabelaAcessos">
                 <thead>
                     <tr>
-                        <th>Nome</th>
-                        <th>Data</th>
-                        <th>Hora</th>
-                        <th>Status</th>
+                        <th>Agrupamento</th>
+                        <th>Carga inicial</th>
+                        <th>Carga atual</th>
+                        <th>Repetições</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Renato lendas velho satanico</td>
-                        <td>03/08/2026</td>
-                        <td>08:15</td>
-                        <td>Falha</td>
+                        <td>Peito</td>
+                        <td>30kg</td>
+                        <td>50kg</td>
+                        <td>3-12</td>
                     </tr>
                     <tr>
-                        <td>Breno de Sa claro/escuro</td>   
-                        <td>03/08/2026</td>
-                        <td>09:42</td>
-                        <td>Sucesso</td>
+                        <td>Costas</td>   
+                        <td>25kg</td>
+                        <td>45kg</td>
+                        <td>3-12</td>
                     </tr>
                     <tr>
-                        <td>Carlao motopeças</td>
-                        <td>02/08/2026</td>
-                        <td>14:30</td>
-                        <td>Falha</td>
+                        <td>Perna</td>
+                        <td>60kg</td>
+                        <td>120kg</td>
+                        <td>3-12</td>
                     </tr>
                     <tr>
-                        <td>gelim casado</td>
-                        <td>02/08/2026</td>
-                        <td>16:05</td>
-                        <td>Sucesso</td>
+                        <td>Abdomen</td>
+                        <td>20kg</td>
+                        <td>35kg</td>
+                        <td>3-20</td>
                     </tr>
-                    <tr>
-                        <td>Pedro tech</td>
-                        <td>01/08/2026</td>
-                        <td>11:20</td>
-                        <td>Falha</td>
-                    </tr>
-                    <tr>
-                        <td>Raquel dos Teclados</td>
-                        <td>01/08/2026</td>
-                        <td>19:48</td>
-                        <td>Sucesso</td>
-                    </tr>
+                    
                 </tbody>
             </table>
         </div>
-
-         <section id="boas-vindas"></section>
-
-    </main>
-
-    <!-- RODAPÉ -->
+        <!-- RODAPÉ -->
     <footer>
         <p>Ambiente de apoio da turma:<a href="https://pedrotech.com.br/pedrolandia/" target="_blank"> Portal Pedro Landia </a>| Smart Control &copy; 2026 - SENAI </p>
-
     </footer>
-    <script src="assets/js/main.js"></script> 
+    </main>
     <script src="assets/js/tema.js"></script>
-
+    <script src="assets/js/busca.js"></script>  
 </body>
 </html>
