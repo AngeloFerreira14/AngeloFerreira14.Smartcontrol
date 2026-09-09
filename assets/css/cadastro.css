@@ -63,29 +63,37 @@ input:focus {
 }
 
 /* Link Concluído */
-a {
-    text-decoration: none;
-}
 
-a {
-    display: flex;
+
+button {
+    display: center;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 0px;
     padding: 12px;
-    border-radius: 15px;
+    height: 50px;
+    width: 300px;
+    border-radius:20px;
     background-color: #b30000;
-    color: white;
-    font-weight: bold;
-    transition: 0.2s;
+  
+
 }
 
-/* Efeito do botão */
-a:hover {
-    background-color: #890000;
-
-    transform: scale(1.02);
+#nivel {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px; 
+    outline: none;
+    font-size: 14px;
+    background-color: white;
+    border: #1f1f1f 1px solid;
 }
+
+#nivel:focus {
+    box-shadow: 0 0 0 3px rgba(179, 0, 0, 0.3);
+}
+
 
 /* Responsividade */
 @media (max-width: 500px) {

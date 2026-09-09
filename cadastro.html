@@ -7,23 +7,39 @@
     <link rel="stylesheet" href="assets/css/cadastro.css">
 </head>
 <body>
-    <form method="get" action="cadastro.html">
+    <form method="get" action="index.html">
        <img src="assets/images/image-removebg-preview.png" alt="logo do sistema" width="100" >
     
        <label for="Nome">nome completo:</label>
-       <input type="text" nome="nome_completo" id="nome_completo" placeholder="Digite seu nome completo">
+       <input type="text" nome="nome_completo" id="nome_completo" placeholder="Digite seu nome completo" required>
        <br><br>
 
        <label for="email">email completo:</label>
-       <input type="text" nome="email_completo" id="email_completo" placeholder="Digite seu email completo">
+       <input type="text" nome="email_completo" id="email_completo" placeholder="Digite seu email completo" required>
        <br><br>
        
-       <label for="senha">senha completo:</label>
-       <input type="text" nome="senha_completo" id="senha_completo" placeholder="Digite sua senha " minlength="8">
+       <label for="senha">senha completa:</label>
+       <input type="text" nome="senha_completo" id="senha_completo" placeholder="Digite sua senha " minlength="8" required  >
        <br><br>
 
+        <div class="Nivel">
+            <label for="nivel">Nível de acesso:</label>
+            <select name="nivel" id="nivel">
+                    <option value="" hidden>Selecione o nível de acesso</option>
+                    <option value="user">Usuário</option>
+                    <option value="admin">Administrador</option> 
+                </select>
+        </div>
+
+        <div class="termos">
+            <label for="termos">Li e concordo com os termos de uso</label>
+            <input type="checkbox" id="termos" required>
+        </div>
+
        <br><br>
-       <a href="index.html">Concluido</a> 
+       <button type="submit">Concluido</button>
+
+    </form>
 
        
 </body>
