@@ -1,11 +1,37 @@
 
 (function () {
 
-    function askUser() {
-        let nomeCompleto = prompt( 'Digite seu nome e sobrenome:');
+    function getStorageItem(key) {
+        try {
+            return localStorage.getItem(key);
+        } catch (error) {
+            return null;
+        }
+    }
 
-        if (!nomeCompleto) {return 'Usuário'; }
-        return nomeCompleto.trim();
+    function setStorageItem(key, value) {
+        try {
+            localStorage.setItem(key, value);
+        } catch (error) {
+            console.warn('Não foi possível salvar no localStorage:', error);
+        }
+    }
+
+    function askUser() {
+        const nomeSalvo = getStorageItem('smartcontrol_nome');
+        if (nomeSalvo && nomeSalvo.trim()) {
+            return nomeSalvo.trim();
+        }
+
+        let nomeCompleto = prompt('Digite seu nome e sobrenome:');
+
+        if (!nomeCompleto || !nomeCompleto.trim()) {
+            return 'Usuário';
+        }
+
+        const nomeFormatado = nomeCompleto.trim();
+        setStorageItem('smartcontrol_nome', nomeFormatado);
+        return nomeFormatado;
     }
 
     const usuario = askUser();
